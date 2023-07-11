@@ -49,8 +49,11 @@ public class JavaQuest1 {
 
     // declare two boolean variable with true and false value
     // code here
-    boolean varC = true;
-    boolean varB = false;
+    string varA = 1;
+    string varB = 0;
+    string varC = 1;
+    boolean varB = varB .equal(varA);
+    boolean varC = varC .equal(varA);
 
     System.out.println("The variable varB is " + varB);
     System.out.println("The variable varC is " + varC);
