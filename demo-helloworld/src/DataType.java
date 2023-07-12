@@ -96,7 +96,7 @@ public class DataType {
 
 
     //
-    int a = 1 + 3; //4
+    int a4 = 1 + 3; //4
     int b10 = 1 - 3; //-2
     int c10 = 2 - 80; // -78
     int i = 2 * 101; // 202
