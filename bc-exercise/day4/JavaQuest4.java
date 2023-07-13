@@ -23,11 +23,11 @@ public class JavaQuest4 {
     int b = 0 ;
     for (int i = 0; i < 100; i++) { // You cannot change this line
       //for (int b = 0; b < 9; b++)
-      if (i % 2 == 0 && i % 3 == 0){
+      if (i % 2 == 0 && i % 3 == 0 && i > 0){
         System.out.println(i) ;
         b++;
       }
-      if (b > 10) {
+      if (b > 9) {
         break;
       }
 
