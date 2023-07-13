@@ -5,14 +5,14 @@ public class Conditionals {
     if (i > 9) { // if (event); // asking if i > 9 , execute the block of code
       System.out.println("i=" + i); // i = 10
     }
-    // flow control : "if" - "else"
+    // flow control : "if" - "else" // if ( ) {} else {}
     if (i < 8) { // not fulfill
       System.out.println("i is smaller than 8");
     } else {
       System.out.println("i is larger than 8");
     }
 
-    // "else if"
+    // "else if" // if ( ) {} else if () {} else {}
     if (i > 12) {
       System.out.println("i > 12");
     } else if (i <= 12 && i >= 0) {
@@ -84,7 +84,7 @@ public class Conditionals {
     // simple Version
     int dayOfWeek = 3;
     String dayName = "";
-    switch (dayOfWeek) { // event
+    switch (dayOfWeek) { // expression
       case 1:
         dayName = "Monday";
         break; // exit
@@ -109,6 +109,45 @@ public class Conditionals {
     }
     System.out.println(dayName);
 
-  }
+    int Sticker = 2;
+    String HowMany = "";
+    switch (Sticker) {
+      case 1:
+        HowMany = "1";
+        break;
+      case 2:
+        HowMany = "2";
+        break;
+      case 3:
+        HowMany = "3";
+        break;
+      case 4:
+        HowMany= "4";
+        break;
+     case 5:
+        HowMany = "5";
+        break;
+    }
+    System.out.println("How many : " + HowMany);
+
+    char grade2 = 'D';
+    int pocketMoney = 0;
+    switch (grade2) {
+      case 'A':
+        pocketMoney += 100;
+        break;
+      case 'B':
+        pocketMoney += 70;
+        break;
+      case 'C':
+        pocketMoney += 20;
+        break;
+      default:
+        pocketMoney += 5;
+        break;
+    }
+    System.out.println("pocket money : " + pocketMoney);
+
+    }
 
 }
