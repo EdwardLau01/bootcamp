@@ -16,7 +16,7 @@ public class Loops {
     for (int j = 6; j > 0; j--) {
       System.out.println("j = " + j);
     }
-
+//************************************************************
     int max = 10;
     int total = 0;
     for (int i = 0; i < max; ++i) {
@@ -91,6 +91,7 @@ public class Loops {
       // i = 5, j = 0 , exit outer loop
     }
 
+    System.out.println("____________");
     // *
     // **
     // ***
@@ -98,6 +99,7 @@ public class Loops {
     // ******
     // System.out.println(); -> nextline after print out
     // System.out.print(); -> continue after print out, no next line
+    
     for (int l = 1; l < 6; l++) {
       for (int s = 6; s > 0; s--) {
         if (l > s) {
@@ -107,12 +109,29 @@ public class Loops {
       System.out.println("*");
     }
 
-    String star = "";
-    for (int l = 0; l < 5; l++) {
-          star += "*";
-      System.out.println(star);
+    // Approach 1: Nested Loop
+    for (int i = 0; i < 5; i++) {
+      for (int j = 0; j < i + 1; j++) {
+        System.out.print("*");
+      }
+      System.out.println("");
+
     }
+    // Approach 2: Single loop & String
+    String str = "";
+    for (int l = 0; l < 5; l++) {
+      str += "*";
+      System.out.println(str);
+    }
+    // Approach 3: Nested Loop & String
+    str = "";
+    for (int i = 0; i < 5; i++) {
+      str = "";
+      for (int j = 0; j < i + 1; j++) {
+        str += "*";
+      }
+      System.out.println(str);
 
+    }
   }
-
 }
