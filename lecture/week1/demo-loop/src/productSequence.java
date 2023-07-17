@@ -32,6 +32,11 @@ public class productSequence {
       // c = a * b
       System.out.print(a * b + " "); // System.out.print(c + " ");
     }
+    System.out.println("");
+
+    for (int i = 0; i < 6;i++) {
+      System.out.print((i * (i + 1)) + " ");
+    }
 
   }
 
