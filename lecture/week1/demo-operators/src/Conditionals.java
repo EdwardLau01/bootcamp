@@ -149,5 +149,4 @@ public class Conditionals {
     System.out.println("pocket money : " + pocketMoney);
 
     }
-
-}
+  }
