@@ -27,6 +27,7 @@ public class String1 {
       System.out.println("yes, it is HELLO");
     }
 
+    //**************************** */
     // substring( , ) //(a , b) a = start index / b = end index -1
     // startIndex , is normal index
     // endIndex , represents the position of (last character + 1)
@@ -35,6 +36,7 @@ public class String1 {
     System.out.println(str.substring(2, 3)); // l
     System.out.println(str.substring(0, 5)); // Hello //(str.substring(0, str.length()));
 
+    //***************************** */
     // substring() // (a) a = start index , defalt endIndex
     System.out.println(str.substring(3)); // lo
 
@@ -42,6 +44,7 @@ public class String1 {
       System.out.println("str contains lo");
     }
 
+    //***************************** */
     // contains()
     String s = "lo";
     System.out.println(str.contains(s)); // true (hello contains "lo")

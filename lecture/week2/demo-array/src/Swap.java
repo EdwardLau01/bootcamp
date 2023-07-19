@@ -11,8 +11,9 @@ public static void main(String[] args) {
     System.out.println("arr[" + i + "]=" + arr[i]);
   }
   System.out.println(SwapOddEventCharacter("hello!"));
-  System.out.println(SwapOddEventCharacter("abcd"));
+  System.out.println(SwapOddEventCharacter("ab cd"));
   System.out.println(SwapOddEventCharacter("abcdef"));
+  //int a = =Math.abs("123");
 
 
 }
@@ -27,15 +28,14 @@ public static void main(String[] args) {
     char[] chars = str.toCharArray();
     char temp;
     for ( int i = 0; i < chars.length - 1; i++) {
-      if (i % 2 == 1) {
-        continue;
-      }
-      if ( i % 2 ==0) {
+      if ( i % 2 == 0) {
         temp = chars[i];
         chars[i] = chars[i + 1];
         chars[i + 1] = temp;
       }
     }
+    // String str1 = String.valueOf(123); // "123" int -> String
+    // String str2 = String.valueOf(true); // "true" boolean -> String
     return String.valueOf(chars);
 
   }

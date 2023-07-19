@@ -15,7 +15,7 @@ import java.util.Scanner;
 // Insert an elements into a specific position of the array
 // The original last element should be removed accordingly
 // if the inputted index is the last index + 1, return the original array
-public class javaquest10error {
+public class JavaQuest10B {
 
   public static void main(String[] args) {
 
@@ -32,20 +32,18 @@ public class javaquest10error {
     System.out.println("Original Array : " + Arrays.toString(my_array));
 
     // code here
-    int[] newArray = my_array;
-    int a = 0; 
-    for (int i = 0; i < newArray.length; i++) {
-      // if (i < indexPosition){
-      //   newArray[i] = my_array[i]; 
-      // }
-      if ( i == indexPosition){
-        newArray[i] = newValue;
+    
+    for (int i = 0; i < my_array.length; i++) {
+      if (indexPosition == i){
+        my_array[my_array.length - 1] = my_array[i];
+        my_array[i] = newValue;
       }
-      if (i > indexPosition){
-        newArray[i] = my_array[indexPosition + a++];
+      if(indexPosition < i) {
+        int temp = my_array[i];
+        my_array[i] = my_array[my_array.length -1]; 
+        my_array[my_array.length -1] = temp;
       }
       }
-      //my_array = newArray;
     System.out.println("New Array: " + Arrays.toString(my_array));
   }
   }
