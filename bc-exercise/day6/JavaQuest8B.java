@@ -2,7 +2,7 @@
  * Example Output
  * Second Max = 230
  */
-public class JavaQuest8 {
+public class JavaQuest8B {
   // Write a loop to find the second max number.
   public static void main(String[] args) {
     // code here
@@ -14,13 +14,14 @@ public class JavaQuest8 {
     // Your program should be able to handle all the above test case.
     int secondMax = 0;
     int Max = 0;
-    int[] nums = new int[] { -10, 5, 100, 240, 240, 80 };
+    int[] nums = new int[] { -10, 5, 120, -100, 100, 240 };
 
     for (int j = 0; j < 2; j++) {
       for (int i = 0; i < nums.length; i++) {
         if (nums[i] > Max) {
           Max = nums[i];
-        } else if (nums[i] > secondMax && nums[i] < Max) {
+        } 
+        if (nums[i] > secondMax && nums[i] < Max) {
           secondMax = nums[i];
         }
       }

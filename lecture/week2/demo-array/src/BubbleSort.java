@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class BuubleSort {
+public class BubbleSort {
   public static void main(String[] args) {
     // [5, 1, 4, 8, 2]
     // step1.1 [1, 5, 4, 8, 2]

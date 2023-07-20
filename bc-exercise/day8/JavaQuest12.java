@@ -1,3 +1,4 @@
+
 /**
  * Case 1: [2,7,11,15] Target: 9 Ans: [0, 1] or [1, 0]
  * 
@@ -5,6 +6,8 @@
  *
  * Case 3: [3, 3] Target: 7 Ans: [-1, -1]
  */
+import java.util.Arrays;
+
 public class JavaQuest12 {
   // Given an array of integers nums and an integer target, return the index of
   // the two numbers such that they add up to target.
@@ -22,27 +25,27 @@ public class JavaQuest12 {
     int[] answers2 = twoSum(new int[] { 3, 2, 4 }, 6); // {3, 2, 4} is the dataset, 6 is the target to sum
     int[] answers3 = twoSum(new int[] { 3, 3 }, 7); // {3, 3} is the dataset, 7 is the target to sum
 
-    System.out.println(twoSum(answers , 9));
+    System.out.println(Arrays.toString(answers));
   }
 
-  // 2+7 2+11 2+15 
+  // 2+7 2+11 2+15
   // Code a method here to return an array of two numbers that sum up to the
   // target
 
-  public static int[] twoSum(int[] arr , int target) {
-    int ans = 0;
-    int ans2 = 0;
-    int temp = 0;
-    for ( int i = 0; i < arr.length - 1; i++) {
-      for (int j = 0; j < arr.length - 1; i++) {
-        temp = arr[i] + arr[j];
-      if (temp == target) {
-        ans = i;
-        ans2 = j + 1;
-        break outerloop;
+  public static int[] twoSum(int[] arr, int target) {
+
+    int[] solution = new int[] { -1, -1 };
+    int sum = 0;
+
+    for (int i = 0; i < arr.length - 1; i++) {
+      for (int j = arr.length - 1; j >= 0; j--) {
+          sum = arr[i] + arr[j];
+        if (sum == target && i != j) {
+          solution[0] = i;
+          solution[1] = j;
+        }
       }
     }
+    return solution;
   }
-  return new int[] {ans , ans2};
-}
 }
