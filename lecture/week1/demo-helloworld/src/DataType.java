@@ -51,8 +51,7 @@ public class DataType {
     System.out.println(b);
 
     // Floating point -> double/ float
-    float f3 = 1.0;
-    0000000000003f;
+    float f3 = 1.00000000000003f;
     double d4 = 23.9;
 
     // char

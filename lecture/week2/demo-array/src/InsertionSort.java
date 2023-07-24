@@ -3,7 +3,7 @@ public class InsertionSort {
     // {5 , 1 , 4 , 8 , 2}
     // Step1.1 : [1, 5, 4, 8, 2] (insert 1 to arr[0], 1 < 5)
     // After round 1, [1, 5] is sorted
-    // step2.1 : compare 4 < 5
+    // step2.1 : compare 4 < 5 -> move 5 to the right
     // step2.2 : compare 1 < 4 -> [1, 4, 5]
     // After round 2, [1, 4, 5] is sorted
     // 5, 1, 4, 8, 2

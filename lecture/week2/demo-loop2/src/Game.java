@@ -15,9 +15,12 @@ public class Game {
       System.out.println (bomb);
       System.out.println ("Please input (" + min + " - " + max + ")");
       input = scanner.nextInt();
-      if (input <= bomb) {
+      if (input < min || input > max) {
+        continue;
+      }
+      if (input < bomb) {
         min = input + 1;
-      } else {
+      } else if (input > bomb) {
         max = input - 1;
       }
 

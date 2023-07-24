@@ -1,4 +1,4 @@
-public class Loops {
+public class Loop1 {
   public static void main(String[] args) {
 
     // For Loop
@@ -100,14 +100,14 @@ public class Loops {
     // System.out.println(); -> nextline after print out
     // System.out.print(); -> continue after print out, no next line
     
-    for (int l = 1; l < 6; l++) {
-      for (int s = 6; s > 0; s--) {
-        if (l > s) {
-          System.out.print("*");
-        }
-      }
-      System.out.println("*");
-    }
+    // for (int l = 1; l < 6; l++) {
+    //   for (int s = 6; s > 0; s--) {
+    //     if (l > s) {
+    //       System.out.print("*");
+    //     }
+    //   }
+    //   System.out.println("*");
+    // }
 
     // Approach 1: Nested Loop
     for (int i = 0; i < 5; i++) {

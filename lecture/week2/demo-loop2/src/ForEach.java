@@ -47,26 +47,26 @@ public class ForEach {
     //   System.out.println(s);
     // }
     // with using split, ues a for loop to split s2
-    // char[] s2a = s2.toCharArray();
-    // String[] s2b = new String [s2a.length];
-    // int p = 0;
-    // for (int i = 0; i < s2a.length; i++) {
-    //   if (i == 0) {
-    //     s2b[p] = "";
-    //   }
-    //   if (s2a[i] == ' ') {
-    //     p++;
-    //     s2b[p] = "";
-    //   } else {
-    //     s2b[p] += s2a[i];
-    //   }
-    // }
-    // for (int j = 0; j < s2b.length; j++){
-    //   if(s2b[j].isBlank()){
-    //     break;
-    //   }
-    //   System.out.println(s2b[j]);
-    // }
+    char[] s2a = s2.toCharArray();
+    String[] s2b = new String [s2a.length];
+    int p = 0;
+    for (int i = 0; i < s2a.length; i++) {
+      if (i == 0) {
+        s2b[p] = "";
+      }
+      if (s2a[i] == ' ') {
+        p++;
+        s2b[p] = "";
+      } else {
+        s2b[p] += s2a[i];
+      }
+    }
+    for (int j = 0; j < s2b.length; j++){
+      if(s2b[j].isBlank()){
+        break;
+      }
+      System.out.println(s2b[j]);
+    }
 
     //Approach 1: substring
     // count Spaces
