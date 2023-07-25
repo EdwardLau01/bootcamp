@@ -1,8 +1,8 @@
 public class Person { // teplate
   // describe the persin by attributes
-  int age;
+  private int age;
 
-  char gender; // week6 -> ENUM
+  private char gender; // week6 -> ENUM
   // .....
 public static boolean isMale(char gender) { //belong to class
   if (gender == 'F') {

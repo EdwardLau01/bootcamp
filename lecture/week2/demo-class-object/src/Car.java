@@ -1,5 +1,7 @@
 public class Car {
 
+  // Instance Variables (Instance -> Object)
+  //Member Variables
   private int noOfWheel; // 0
   private int capacity; // 0
   private String color; // null
