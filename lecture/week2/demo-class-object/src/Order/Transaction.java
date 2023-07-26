@@ -22,8 +22,8 @@ public class Transaction {
 
   // getsubtotal() 
 
-  public double getSubtotal (){
-    
+  public double getSubTotal (){
+    return this.unitPrice * this.quantity;
   }
 
   public int getItemNo(){

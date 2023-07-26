@@ -20,6 +20,10 @@ public class ItemDesc {
     Transaction t2 = new Transaction(1, itemDesc2, 4, 20.5);
     Order order = new Order (new Transaction[]{t ,t2});
 
+    System.out.println(t.getSubTotal());
+    System.out.println(t2.getSubTotal());
+    System.out.println(order.getTotal());
+
   }
 
 }
