@@ -38,6 +38,7 @@ public class String2 {
       String s = "Java is a programming language";
       System.out.println(s.replace("Java" , "Python")); // Python is programming language
       System.out.println(s.replace('p' , 'q'));
+      System.out.println(s.replace(s.charAt(0) , s.charAt(11)));
       
       // equals , equalsIgnoreCase
       if ("hello".equals(str3)) {

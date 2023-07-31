@@ -84,6 +84,14 @@ public class StringBox { // Class
     return this.string2;
   }
 
+  public char[] toCharArray() {
+    char[] chars = new char[this.string.length()];
+    for (int i = 0; i < chars.length; i++){
+      chars[i] = this.string.charAt(i);
+    }
+    return chars;
+  }
+
   public static void main(String[] args) {
     StringBox s = new StringBox();
     s.setString("Java1");
@@ -91,9 +99,14 @@ public class StringBox { // Class
     System.out.println(s.append2("Python2"));
     System.out.println(s.append("Python1"));
 
+    for ( char x : s.toCharArray()){
+      System.out.println(x);
+    }
+
     StringBox s2 = new StringBox();
     
     String s4 = StringBox.append("hello", " world").toString();
+    }
   }
 
 }
