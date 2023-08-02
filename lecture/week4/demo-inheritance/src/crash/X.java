@@ -2,7 +2,7 @@ package crash;
 
 public class X extends Y{
   
-  private String name; // 
+  private String name; // hiding
 
   public X(){
     

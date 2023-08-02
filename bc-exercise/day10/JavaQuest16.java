@@ -25,7 +25,7 @@ public class JavaQuest16 {
     int[] nums1 = sumToZero(3); // n = 3
     int[] nums2 = sumToZero(2); // n = 2
     int[] nums3 = sumToZero(1); // n = 1
-    System.out.println(Arrays.toString(nums));
+    System.out.println(Arrays.toString(nums2));
   }
 
   // Code a method to return int[].
@@ -34,24 +34,16 @@ public class JavaQuest16 {
   // 3. The values in the array has to be unique
 
   public static int[] sumToZero(int num) {
-
-    
     int sum = 0;
-    int[] arr = new int [num];
+    int[] arr = new int[num];
 
-    outerloop:for (int j = 0; j >= 0; j++){
-    for (int i = 0; i <= arr.length - 1; i++) {
-      arr[i] = random;
+    for (int i = 0; i < arr.length; i++) {
+      arr[i] = -1 - i ;
+      sum += i;
+      if (i == arr.length - 1){
+        arr[i] = sum;
+      }
     }
-    sum = 0;
-    for (int x : arr) {
-      sum += x;
-    }
-    if (sum == 0){
-      break outerloop;
-    }
+    return arr;
   }
-  return arr;
-  }
-
 }

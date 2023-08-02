@@ -31,7 +31,7 @@ public class Maths {
     int [] nums = new int [] {-100 , 100 , 90 , 50};
     double d = 0;
     for ( int i = 0; i < nums.length ; i ++) {
-      d += Math.abs(nums[i]);
+      d += Math.abs(nums[i]); // 340
     }
     System.out.println((int)d);
 
@@ -40,11 +40,11 @@ public class Maths {
     for ( int i = 0; i < arr.length; i++) {
       sum = sum + (int)Math.round(Math.abs(arr[i]));  //
     } 
-    System.out.println(sum);
+    System.out.println(sum); //28
 
     int cubeLength = 3;
     double volume = Math.pow(cubeLength , 3);
-    System.out.println(volume);
+    System.out.println(volume); //27.0d
 
     int[] bases = new int[] { 2, 3, 4, 5};
     int[] index = new int[] { 3, 4, 5, 6};

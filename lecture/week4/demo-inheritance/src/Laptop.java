@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Laptop extends Machine {
   // laptop is subclass(child) , Machine is superclass(parent)
   // Inherit Machine attribute ("double weight")
@@ -29,9 +31,13 @@ public class Laptop extends Machine {
 
   public Laptop(double weight, Keyboard keyboard, Monitor monitor) {
     // supercalss must be frist
-    super(weight); // = super(); + this.setWeight(weight) // new Machine(double weight); 
+    super(weight); // = super(); + this.setWeight(weight) // new Machine(double weight);
     this.keyboard = keyboard;
     this.monitor = monitor;
+  }
+
+  public void mute() {
+    this.volume = 0;
   }
 
   @Override // Method Overriding
@@ -45,9 +51,18 @@ public class Laptop extends Machine {
     System.out.println(("Laptop staop..."));
   }
 
-  public void mute() {
-    this.volume = 0;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o)
+      return true;
+    if (!(o instanceof Laptop))
+      return false;
+    Laptop laptop = (Laptop) o;
+    return Objects.equals(laptop.keyboard, this.keyboard)
+        && Objects.equals(laptop.monitor, this.monitor);
   }
+
+
   // you cannot override the final method
   // public static final String statiMmethod (String x, String y){
 
@@ -71,7 +86,7 @@ public class Laptop extends Machine {
 
     Laptop l1 = new Laptop(30.0d, k1, m1);
 
-    Laptop laptop2 = new Laptop();
+    Laptop laptop2 = new Laptop(); // empty construstor
     laptop2.setWeight(10.0d);
     System.out.println(laptop2.getWeight());
 

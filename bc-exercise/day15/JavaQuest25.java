@@ -16,5 +16,17 @@ public class JavaQuest25 {
 
   public static int countWords(String s) {
     // code here
+    int count = 0;
+    for(int i = 0; i < s.length(); i++){
+      if (s.isBlank()) {
+        return count;
+      }
+      if(i != 0 && s.charAt(i) == ' ' && s.charAt(i - 1) != ' ') {
+        count++;
+      } else if (i == s.length() - 1 && s.charAt(i) != ' ') {
+        count++;
+      }
+    }
+    return count;
   }
 }

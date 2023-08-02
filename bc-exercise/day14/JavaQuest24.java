@@ -16,6 +16,7 @@ public class JavaQuest24 {
     System.out.println(absolute(new int[] { 1, 2, 2, 1 }, 1)); // 4
     System.out.println(absolute(new int[] { 3, 2, 1, 5, 4 }, 2));// 3
     System.out.println(absolute(new int[] { 5, 3, 1 }, 1));// 0
+    System.out.println(absolute(new int[] { 3, 5, 4, 2, 1 }, 2));// 3
 
   }
 
@@ -23,8 +24,13 @@ public class JavaQuest24 {
 
     int count = 0;
     for (int i = 0; i < nums.length; i++){
-      
+      for (int j = nums.length -1; j >= i ; j--  ){
+        if (Math.abs(nums[i] - nums[j]) == target) {
+          count++;
+        }
+      }
     }
+    return count;
 
   }
 }

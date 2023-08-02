@@ -21,6 +21,18 @@ public class JavaQuest26 {
 
   public static int sum(int[] nums) {
     // code here
+    int sum = 0;
+    int[] result = new int[100];
+    for(int x : nums){
+      result[x]++;
+    }
+    for (int i = 0; i < result.length; i++) {
+      if (result[i] == 1) {
+        sum += i;
+      }
+    }
+    return sum;
+
   }
 
 }
