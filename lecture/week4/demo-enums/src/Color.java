@@ -2,7 +2,7 @@ public enum Color {
   //hexCode
   RED("#FF000"), //
   GREEN("#00FF00"), //
-  BULE("#000FF"), //
+  BLUE("#000FF"), //
   ;
 
   private String hexCode;
