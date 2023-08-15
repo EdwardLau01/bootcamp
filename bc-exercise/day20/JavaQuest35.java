@@ -29,7 +29,7 @@ public class JavaQuest35 {
     System.out.println(moveZeroes(new int[] { 0, 0, 1, 3, 12 }));// [1,3,12,0,0]
     System.out.println(moveZeroes(new int[] { 1, 3, 0, 0, 12 }));// [1,3,12,0,0]
     System.out.println(moveZeroes(new int[] { 1, 3, 12, 0, 0 }));// [1,3,12,0,0]
-    System.out.println(moveZeroes(new int[] { 0, 0, 0, 0, 1 }));// [1,3,12,0,0]
+    System.out.println(moveZeroes(new int[] { 0, 0, 0, 0, 1 }));// [0,0,0,0,1]
 
   }
 
@@ -43,9 +43,6 @@ public class JavaQuest35 {
          nums[i - count] = nums[i];
          nums[i] = 0;
       }
-    }
-    for (int j = nums.length - 1; j >= nums.length - count; j--) {
-      nums[j] = 0;
     }
     return Arrays.toString(nums);
   }

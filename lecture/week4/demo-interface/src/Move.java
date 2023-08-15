@@ -1,11 +1,11 @@
 public interface Move extends BigMove {
 
-  // No instance variables -> camlcase
+  // No instance variables ->  camelcase
 
   // Constant
   static final int MAX_SPEED = 10; // public
 
-  // Java -> naming convention -> Camlcase
+  // Java -> naming convention ->  camelcase
   // "noOfDay"
 
   // Behaviors

@@ -44,8 +44,5 @@ public class JavaQuest33 {
       }
     }
     return Arrays.toString(nums);
-
-
-
   }
 }
