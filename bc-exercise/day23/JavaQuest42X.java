@@ -37,7 +37,7 @@ n == accounts[i].length
 
 import java.util.LinkedList;
 
-public class JavaQuest42 {
+public class JavaQuest42X {
   public static void main(String[] args) {
     System.out.println(maximumWealth(new int[][] { { 1, 2, 3 }, { 3, 2, 1 } }));// output : 6
     System.out.println(maximumWealth(new int[][] { { 1, 5 }, { 3, 7 }, { 3, 5 } }));// output : 10
