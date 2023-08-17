@@ -5,18 +5,23 @@ import java.util.stream.Collectors;
 public class StreamExampleGpt {
     // In this example, we have a list of names: "John", "Jane", "Adam", "Eva",
     // "Mike", and "Emily".
+
     // Example 1 demonstrates filtering the names that start with the letter "J"
     // using the filter intermediate operation. The filtered names are then printed
     // using the forEach terminal operation.
+
     // Example 2 showcases mapping each name to its length using the map
     // intermediate operation. The lengths are collected into a new list using the
     // collect terminal operation with Collectors.toList().
+
     // Example 3 shows the chaining of multiple operations. First, we filter out
     // names with a length greater than 4 characters. Then, the filtered names are
     // sorted in alphabetical order using the sorted intermediate operation.
+
     // Finally, we limit the result to the first three names using the limit
     // intermediate operation. The resulting names are collected into a new list and
     // printed.
+    
     // The Stream API provides a wide range of operations that can be combined and
     // customized based on your specific requirements. By chaining these operations
     // together, you can create powerful data processing pipelines with concise and

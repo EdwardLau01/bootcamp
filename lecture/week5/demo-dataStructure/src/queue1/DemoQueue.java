@@ -38,6 +38,7 @@ public class DemoQueue {
     }
 
     LinkedList<String> backup = queues;
+
     while (!queues.isEmpty()) {
       System.out.println(queues.poll());
     }

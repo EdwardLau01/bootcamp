@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -77,17 +79,60 @@ public class DemoArrayList {
         .distinct() //
         .count(); // 1
 
-        Stream.of(1,2,3,4) //
-        .map(e ->{
+    Stream.of(1, 2, 3, 4) //
+        .map(e -> {
           System.out.println(e);
           return e;
         }).count();
 
-        Stream.of(1,2,3,4) //
-        .forEach(e ->{
+    // .count(); // terminate operation
+
+    Stream<Integer> stream = Stream.of(1, 2, 3, 4) //
+        .map(e -> {
           System.out.println(e);
+          return e;
         });
 
+    List<Integer> integers = Stream.of(1, 2, 3, 4) //
+        .map(e -> {
+          System.out.println("map=" + e);
+          return 2;
+        })
+        .collect(Collectors.toList());
+
+    System.out.println(integers);
+
+    int setSize = Stream.of(1, 2, 3, 3) //
+        .collect(Collectors.toSet()).size();
+    System.out.println(setSize); // 3
+
+    Stream.of(1, 2, 3, 3, 5) //
+        .filter(e -> e < 6 && e > 2) //
+        .forEach(e -> System.out.println(e)); // 3 3 5
+
+    List<String> animals = Arrays.asList("lion", "tiger", "bear");
+
+    Map<String, Integer> animalMap = animals.stream() //
+        .collect(Collectors.toMap(str -> str, str -> str.length()));
+
+    // Loop Map
+    for (Map.Entry<String, Integer> entry : animalMap.entrySet()) {
+      System.out.println(entry.getKey() + " " + entry.getValue());
+    }
+
+    // Stream.iterate
+    Stream.iterate(1, n -> n + 2) //
+        .limit(10)
+        .forEach(e -> System.out, println(e));
+  }
+
+  // Group By
+
+  public static boolean find(List<Person> persons) {
+    return persons.stream() // Stream<>
+        .filter(e -> e.isElderly()) // Stream<>
+        .findFirst() // Optional<Person>
+        .isPresent(); // boolean
   }
 
 }

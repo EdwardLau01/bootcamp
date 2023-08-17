@@ -46,6 +46,32 @@ public class JavaQuest51 {
 
   public static List<List<Integer>> largeGroupPositions(String s) {
 
+    List<List<Integer>> numsList = new ArrayList<>();
+    int count = 0;
+    char c = s.charAt(0);
+    for (int i = 0; i < s.length(); i++) {
+      if (s.charAt(i) == c) {
+        count++;
+      }
+      if (s.charAt(i) != c) {
+        if (count >= 3) {
+          List<Integer> nums = new ArrayList<>();
+          nums.add(i - count);
+          nums.add(i - 1);
+          numsList.add(nums);
+        }
+        count = 1;
+        c = s.charAt(i);
+      }
+    }
+    if (count >= 3) {
+      List<Integer> nums = new ArrayList<>();
+      nums.add(s.length() - count);
+      nums.add(s.length() - 1);
+      numsList.add(nums);
+    }
+    return numsList;
+
   }
 
 }

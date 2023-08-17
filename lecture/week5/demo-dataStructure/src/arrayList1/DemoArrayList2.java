@@ -13,6 +13,7 @@ public class DemoArrayList2 {
     strs.add("def");
     strs.add("xyz");
     strs.add("def");
+    strs.
 
     System.out.println(strs.subList(1, 2)); // subString() like, def, from idx 1 to idx 1
     strs.remove("def"); // remove by Object

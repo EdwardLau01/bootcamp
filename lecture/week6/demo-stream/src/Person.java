@@ -10,8 +10,12 @@ public class Person {
     return this.name;
   }
 
-  public int getage(){
+  public int getAge(){
     return this.age;
+  }
+
+  public boolean isElderly() {
+    return this.age >= 65;
   }
   
 }

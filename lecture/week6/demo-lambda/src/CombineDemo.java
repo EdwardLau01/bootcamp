@@ -5,7 +5,7 @@ public class CombineDemo {
 
   public static void main(String[] args) {
     Predicate<String> startsWithV = s -> s.startsWith("V");
-    Predicate<String> endsWithE = s -> s.endsWithE("E");
+    Predicate<String> endsWithE = s -> s.endsWith("E");
 
     Predicate<String> combined = startsWithV.and(endsWithE);
     System.out.println(combined.test("VE")); // true
