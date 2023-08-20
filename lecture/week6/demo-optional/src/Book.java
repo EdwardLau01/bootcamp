@@ -4,5 +4,9 @@ public class Book {
   public Book(String author){
     this.author = author;
   }
+
+  public void getBook(){
+    
+  }
   
 }

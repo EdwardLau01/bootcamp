@@ -28,7 +28,10 @@ Constraints:
 1 <= nums1[i], nums2[j], nums3[k] <= 100*/
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Set;
 
 public class JavaQuest54 {
   public static void main(String[] args) {
@@ -50,7 +53,46 @@ public class JavaQuest54 {
   }
 
   public static List<Integer> twoOutOfThree(int[] nums1, int[] nums2, int[] nums3) {
+    PriorityQueue<Integer> result = new PriorityQueue<>();
+    List<Integer> set1 = new ArrayList<>();
+    List<Integer> set2 = new ArrayList<>();
+    List<Integer> set3 = new ArrayList<>();
 
+    for (int i = 0; i < nums1.length; i++) {
+      set1.add(nums1[i]);
+    }
+
+    for (int i = 0; i < nums2.length; i++) {
+      set2.add(nums2[i]);
+    }
+
+    for (int i = 0; i < nums3.length; i++) {
+      set3.add(nums3[i]);
+    }
+
+    for (int i = 0; i < nums1.length; i++) {
+      if (set2.contains(nums1[i]) || set3.contains(nums1[i]))
+        result.add(nums1[i]);
+    }
+
+    for (int i = 0; i < nums2.length; i++) {
+      if (set1.contains(nums2[i]) || set3.contains(nums2[i]))
+        result.add(nums2[i]);
+    }
+
+    for (int i = 0; i < nums3.length; i++) {
+      if (set1.contains(nums3[i]) || set2.contains(nums3[i]))
+        result.add(nums3[i]);
+    }
+
+    List<Integer> integers = new ArrayList<>();
+
+    for (Integer x : result) {
+      if (!integers.contains(x))
+        integers.add(x);
+    }
+
+    return integers;
   }
 
 }

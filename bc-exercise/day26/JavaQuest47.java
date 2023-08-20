@@ -24,7 +24,7 @@ Constraints:
 1 <= s.length <= 105
 s consists of only lowercase English letters */
 
-public class JavaQuest47X {
+public class JavaQuest47 {
   public static void main(String[] args) {
     System.out.println(firstUniqChar("leetcode"));// 0
     System.out.println(firstUniqChar("loveleetcode"));// 2

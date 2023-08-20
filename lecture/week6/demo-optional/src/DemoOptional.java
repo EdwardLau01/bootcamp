@@ -5,6 +5,14 @@ import java.util.Optional;
 public class DemoOptional {
   public static void main(String[] args) throws Exception {
 
+    // Optional<Book> -> Book -> Author
+    Optional<Book> o = getBook();
+    if (!o.isPresent()){
+      
+    }
+
+
+
     List<Book> books = new ArrayList<>();
     books.add(new Book("John"));
     books.add(new Book("Mary"));

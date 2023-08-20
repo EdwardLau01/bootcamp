@@ -35,7 +35,11 @@ public class Wrapper {
 
     //Difference?
     Character c3 = Character.valueOf('s');
-    CharSequence c4 = 's';
+    Character c4 = 's';
+
+    StringBuilder sb = new StringBuilder("Hello World");
+    sb.replace(3, 7, "kk");
+    System.out.println(sb.toString());
 
 
 

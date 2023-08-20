@@ -27,6 +27,7 @@ public class JavaQuest48 {
     System.out.println(isValid("()[]{}"));// true
     System.out.println(isValid("(]"));// false
     System.out.println(isValid("([{}]){[]}"));// true
+    System.out.println(isValid(")(]{}}{"));// false
 
   }
 
@@ -39,7 +40,6 @@ public class JavaQuest48 {
     int square = 0;
     int curly = 0;
     char bracket = ' ';
-
     for (int j = 0; j < s.length(); j++) {
       bracket = temp.pop();
       if (bracket == ')')
@@ -48,15 +48,15 @@ public class JavaQuest48 {
         square++;
       if (bracket == '}')
         curly++;
-      if (round >= 1 && bracket == '(')
+      if (round != 0 && round % 2 == 1 && bracket == '(')
         round++;
-      if (square >= 1 && bracket == '[')
+      if (square != 0 && square % 2 == 1 && bracket == '[')
         square++;
-      if (curly >= 1 && bracket == '{')
+      if (curly != 0 && curly % 2 == 1 && bracket == '{')
         curly++;
     }
 
-    if (round % 2 == 0 && curly % 2 == 0 && square % 2 == 0)
+    if ( round + curly + square == s.length() && round % 2 == 0 && curly % 2 == 0 && square % 2 == 0)
       return true;
 
     return false;

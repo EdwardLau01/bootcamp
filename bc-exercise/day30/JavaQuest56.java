@@ -34,14 +34,38 @@ Constraints:
 1 <= nums.length <= 100
 0 <= nums[i] <= 100
  */
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class JavaQuest56 {
   public static void main(String[] args) {
-    System.out.println(numberOfPairs(new int[] { 1, 3, 2, 1, 3, 2, 2 }));// [3,1]
-    System.out.println(numberOfPairs(new int[] { 1, 1 }));// [1,0]
-    System.out.println(numberOfPairs(new int[] { 0 }));// [0,1]
+    System.out.println(Arrays.toString(numberOfPairs(new int[] { 1, 3, 2, 1, 3, 2, 2 })));// [3,1]
+    System.out.println(Arrays.toString(numberOfPairs(new int[] { 1, 1 })));// [1,0]
+    System.out.println(Arrays.toString(numberOfPairs(new int[] { 0 })));// [0,1]
 
   }
 
   public static int[] numberOfPairs(int[] nums) {
+    Map<Integer, Integer> numsMap = new HashMap<>();
+    for (Integer i : nums) {
+      numsMap.compute(i, (key, old) -> old == null ? 1 : old + 1);
+    }
+    int count = 0;
+    int pair = 0;
+    for (Map.Entry<Integer, Integer> entry : numsMap.entrySet()) {
+      if (entry.getValue() >= 2) {
+        pair += entry.getValue() / 2;
+        if (entry.getValue() % 2 == 1)
+          count++;
+        continue;
+      }
+      count++;
+    }
+    int[] result = new int[] { pair, count };
+
+    return result;
+
   }
 }

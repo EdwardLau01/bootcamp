@@ -27,6 +27,10 @@ Constraints:
 nums.length == 2 * n
 1 <= n <= 500
 1 <= nums[i] <= 500 */
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class JavaQuest55 {
   public static void main(String[] args) {
     System.out.println(divideArray(new int[] { 3, 2, 3, 2, 2, 2 }));// true
@@ -36,6 +40,25 @@ public class JavaQuest55 {
   }
 
   public static boolean divideArray(int[] nums) {
+
+    Map<Integer, Integer> numsMap = new HashMap<>();
+
+    boolean evenlyDivisible = false;
+
+    for (Integer i : nums) {
+      numsMap.compute(i, (key, old) -> old == null ? 1 : old + 1);
+    }
+
+    for (Map.Entry<Integer, Integer> entry : numsMap.entrySet()) {
+      if (entry.getValue() % 2 == 0) {
+        evenlyDivisible = true;
+        continue;
+      }
+      return false;
+    }
+
+    return evenlyDivisible;
+
   }
 
 }
