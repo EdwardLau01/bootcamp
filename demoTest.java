@@ -29,6 +29,13 @@ public class demoTest {
 
     double d = 0.2 + 0.11;
     System.out.println(d);
+
+    Integer x = 2;
+
+    String s;
+    s.is
+
+    
   }
 
 }
